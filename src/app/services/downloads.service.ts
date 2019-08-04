@@ -34,7 +34,7 @@ export class DownloadsService {
         this.commService.serverSettings = serverSettings;
         const createUrl = this.buildFullPath("/api/v1/downloads");
         let download: Download = new Download();
-        download.fromBackgroundJS(url);
+        download.url = url;
         this.httpClient.post(createUrl, {"download": download.toJSON()}).subscribe();
       },
       (error) => console.error("nope")

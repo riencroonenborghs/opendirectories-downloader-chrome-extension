@@ -3434,7 +3434,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Volumes/Real Code/personal/Chrome plugins/opendirectories-downloader/src/polyfills.ts */"./src/polyfills.ts");
+module.exports = __webpack_require__(/*! /Volumes/Real Code/personal/opendirectories-downloader-chrome-extension/src/polyfills.ts */"./src/polyfills.ts");
 
 
 /***/ })

@@ -26,6 +26,7 @@ export class Download {
   cancelled_at:string;
 
   toJSON() {
+    this.parseUrl();
     return JSON.stringify({
       "url": this.url,
       "audio_format": this.audio_format,
@@ -38,9 +39,8 @@ export class Download {
     });
   }
 
-  fromBackgroundJS(url: string) {
-    this.url = url;
-    if(url.match(/\:\/\/released.tv\/files\/(.*)/)) {
+  private parseUrl() {
+    if(this.url.match(/\:\/\/released.tv\/files\/(.*)/) != null) {
       this.http_username = "released";
       this.http_password = "released";
     }

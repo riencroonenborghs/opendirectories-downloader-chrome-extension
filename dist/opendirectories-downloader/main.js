@@ -566,7 +566,7 @@ __webpack_require__.r(__webpack_exports__);
  * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
  * tslint:disable
  */ 
-var styles = ["mat-form-field[_ngcontent-%COMP%] {\n  margin: 4px; }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Wb2x1bWVzL1JlYWwgQ29kZS9wZXJzb25hbC9DaHJvbWUgcGx1Z2lucy9vcGVuZGlyZWN0b3JpZXMtZG93bmxvYWRlci9zcmMvYXBwL2NvbXBvbmVudHMvYWRkLWRvd25sb2FkLWRpYWxvZy9hZGQtZG93bmxvYWQtZGlhbG9nLmNvbXBvbmVudC5zYXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsV0FBVyxFQUFBIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9hZGQtZG93bmxvYWQtZGlhbG9nL2FkZC1kb3dubG9hZC1kaWFsb2cuY29tcG9uZW50LnNhc3MiLCJzb3VyY2VzQ29udGVudCI6WyJtYXQtZm9ybS1maWVsZCB7XG4gIG1hcmdpbjogNHB4OyB9XG4iXX0= */"];
+var styles = ["mat-form-field[_ngcontent-%COMP%] {\n  margin: 4px; }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Wb2x1bWVzL1JlYWwgQ29kZS9wZXJzb25hbC9vcGVuZGlyZWN0b3JpZXMtZG93bmxvYWRlci1jaHJvbWUtZXh0ZW5zaW9uL3NyYy9hcHAvY29tcG9uZW50cy9hZGQtZG93bmxvYWQtZGlhbG9nL2FkZC1kb3dubG9hZC1kaWFsb2cuY29tcG9uZW50LnNhc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxXQUFXLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2FkZC1kb3dubG9hZC1kaWFsb2cvYWRkLWRvd25sb2FkLWRpYWxvZy5jb21wb25lbnQuc2FzcyIsInNvdXJjZXNDb250ZW50IjpbIm1hdC1mb3JtLWZpZWxkIHtcbiAgbWFyZ2luOiA0cHg7IH1cbiJdfQ== */"];
 
 
 
@@ -755,7 +755,7 @@ __webpack_require__.r(__webpack_exports__);
  * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
  * tslint:disable
  */ 
-var styles = [".download[_ngcontent-%COMP%] {\n  margin: 4px; }\n  .download[_ngcontent-%COMP%]   .url[_ngcontent-%COMP%] {\n    width: 85%;\n    text-overflow: ellipsis; }\n  .download[_ngcontent-%COMP%]   .url[_ngcontent-%COMP%]   icon[_ngcontent-%COMP%] {\n      padding-right: 8px; }\n  .download[_ngcontent-%COMP%]   .url[_ngcontent-%COMP%]   .full-url[_ngcontent-%COMP%] {\n      padding-top: 3px; }\n  .download[_ngcontent-%COMP%]   .buttons[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]:first-child {\n    margin-right: 8px; }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Wb2x1bWVzL1JlYWwgQ29kZS9wZXJzb25hbC9DaHJvbWUgcGx1Z2lucy9vcGVuZGlyZWN0b3JpZXMtZG93bmxvYWRlci9zcmMvYXBwL2NvbXBvbmVudHMvZG93bmxvYWRfZGV0YWlscy9kb3dubG9hZF9kZXRhaWxzLmNvbXBvbmVudC5zYXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsV0FBVyxFQUFBO0VBRGI7SUFHSSxVQUFVO0lBQ1YsdUJBQXVCLEVBQUE7RUFKM0I7TUFNTSxrQkFBa0IsRUFBQTtFQU54QjtNQVFNLGdCQUFnQixFQUFBO0VBUnRCO0lBV00saUJBQWlCLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2Rvd25sb2FkX2RldGFpbHMvZG93bmxvYWRfZGV0YWlscy5jb21wb25lbnQuc2FzcyIsInNvdXJjZXNDb250ZW50IjpbIi5kb3dubG9hZCB7XG4gIG1hcmdpbjogNHB4O1xuICAudXJsIHtcbiAgICB3aWR0aDogODUlO1xuICAgIHRleHQtb3ZlcmZsb3c6IGVsbGlwc2lzO1xuICAgIGljb24ge1xuICAgICAgcGFkZGluZy1yaWdodDogOHB4OyB9XG4gICAgLmZ1bGwtdXJsIHtcbiAgICAgIHBhZGRpbmctdG9wOiAzcHg7IH0gfVxuICAuYnV0dG9ucyB7XG4gICAgYnV0dG9uOmZpcnN0LWNoaWxkIHtcbiAgICAgIG1hcmdpbi1yaWdodDogOHB4OyB9IH0gfVxuIl19 */"];
+var styles = [".download[_ngcontent-%COMP%] {\n  margin: 4px; }\n  .download[_ngcontent-%COMP%]   .url[_ngcontent-%COMP%] {\n    width: 85%;\n    text-overflow: ellipsis; }\n  .download[_ngcontent-%COMP%]   .url[_ngcontent-%COMP%]   icon[_ngcontent-%COMP%] {\n      padding-right: 8px; }\n  .download[_ngcontent-%COMP%]   .url[_ngcontent-%COMP%]   .full-url[_ngcontent-%COMP%] {\n      padding-top: 3px; }\n  .download[_ngcontent-%COMP%]   .buttons[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]:first-child {\n    margin-right: 8px; }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Wb2x1bWVzL1JlYWwgQ29kZS9wZXJzb25hbC9vcGVuZGlyZWN0b3JpZXMtZG93bmxvYWRlci1jaHJvbWUtZXh0ZW5zaW9uL3NyYy9hcHAvY29tcG9uZW50cy9kb3dubG9hZF9kZXRhaWxzL2Rvd25sb2FkX2RldGFpbHMuY29tcG9uZW50LnNhc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxXQUFXLEVBQUE7RUFEYjtJQUdJLFVBQVU7SUFDVix1QkFBdUIsRUFBQTtFQUozQjtNQU1NLGtCQUFrQixFQUFBO0VBTnhCO01BUU0sZ0JBQWdCLEVBQUE7RUFSdEI7SUFXTSxpQkFBaUIsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvZG93bmxvYWRfZGV0YWlscy9kb3dubG9hZF9kZXRhaWxzLmNvbXBvbmVudC5zYXNzIiwic291cmNlc0NvbnRlbnQiOlsiLmRvd25sb2FkIHtcbiAgbWFyZ2luOiA0cHg7XG4gIC51cmwge1xuICAgIHdpZHRoOiA4NSU7XG4gICAgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7XG4gICAgaWNvbiB7XG4gICAgICBwYWRkaW5nLXJpZ2h0OiA4cHg7IH1cbiAgICAuZnVsbC11cmwge1xuICAgICAgcGFkZGluZy10b3A6IDNweDsgfSB9XG4gIC5idXR0b25zIHtcbiAgICBidXR0b246Zmlyc3QtY2hpbGQge1xuICAgICAgbWFyZ2luLXJpZ2h0OiA4cHg7IH0gfSB9XG4iXX0= */"];
 
 
 
@@ -1585,7 +1585,7 @@ __webpack_require__.r(__webpack_exports__);
  * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
  * tslint:disable
  */ 
-var styles = [".spacer[_ngcontent-%COMP%] {\n  flex: 1 1 auto; }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Wb2x1bWVzL1JlYWwgQ29kZS9wZXJzb25hbC9DaHJvbWUgcGx1Z2lucy9vcGVuZGlyZWN0b3JpZXMtZG93bmxvYWRlci9zcmMvYXBwL2NvbXBvbmVudHMvdG9wYmFyL3RvcGJhci5jb21wb25lbnQuc2FzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGNBQWMsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvdG9wYmFyL3RvcGJhci5jb21wb25lbnQuc2FzcyIsInNvdXJjZXNDb250ZW50IjpbIi5zcGFjZXIge1xuICBmbGV4OiAxIDEgYXV0bzsgfVxuIl19 */"];
+var styles = [".spacer[_ngcontent-%COMP%] {\n  flex: 1 1 auto; }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Wb2x1bWVzL1JlYWwgQ29kZS9wZXJzb25hbC9vcGVuZGlyZWN0b3JpZXMtZG93bmxvYWRlci1jaHJvbWUtZXh0ZW5zaW9uL3NyYy9hcHAvY29tcG9uZW50cy90b3BiYXIvdG9wYmFyLmNvbXBvbmVudC5zYXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsY0FBYyxFQUFBIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy90b3BiYXIvdG9wYmFyLmNvbXBvbmVudC5zYXNzIiwic291cmNlc0NvbnRlbnQiOlsiLnNwYWNlciB7XG4gIGZsZXg6IDEgMSBhdXRvOyB9XG4iXX0= */"];
 
 
 
@@ -1709,6 +1709,7 @@ var Download = /** @class */ (function () {
     function Download() {
     }
     Download.prototype.toJSON = function () {
+        this.parseUrl();
         return JSON.stringify({
             "url": this.url,
             "audio_format": this.audio_format,
@@ -1720,9 +1721,8 @@ var Download = /** @class */ (function () {
             "http_password": this.http_password
         });
     };
-    Download.prototype.fromBackgroundJS = function (url) {
-        this.url = url;
-        if (url.match(/\:\/\/released.tv\/files\/(.*)/)) {
+    Download.prototype.parseUrl = function () {
+        if (this.url.match(/\:\/\/released.tv\/files\/(.*)/) != null) {
             this.http_username = "released";
             this.http_password = "released";
         }
@@ -1970,7 +1970,7 @@ var DownloadsService = /** @class */ (function () {
             _this.commService.serverSettings = serverSettings;
             var createUrl = _this.buildFullPath("/api/v1/downloads");
             var download = new _models_download__WEBPACK_IMPORTED_MODULE_3__["Download"]();
-            download.fromBackgroundJS(url);
+            download.url = url;
             _this.httpClient.post(createUrl, { "download": download.toJSON() }).subscribe();
         }, function (error) { return console.error("nope"); });
     };
@@ -2065,7 +2065,7 @@ _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__["platformBrowser"]().boot
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Volumes/Real Code/personal/Chrome plugins/opendirectories-downloader/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Volumes/Real Code/personal/opendirectories-downloader-chrome-extension/src/main.ts */"./src/main.ts");
 
 
 /***/ })
