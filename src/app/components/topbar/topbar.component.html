@@ -1,0 +1,34 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row *ngIf="!commService.signedIn">
+    <button mat-icon-button (click)="settings()">
+      <mat-icon>settings</mat-icon>
+    </button>
+    <span>Downloader</span>
+    <span class="spacer"></span>
+    <button mat-icon-button (click)="signIn()">
+      <mat-icon>lock_open</mat-icon>
+    </button>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row *ngIf="commService.signedIn">
+    <button mat-icon-button (click)="settings()">
+      <mat-icon>settings</mat-icon>
+    </button>
+    <span>Downloader</span>
+    <span class="spacer"></span>
+    <mat-progress-spinner color="accent" mode="indeterminate" diameter=24 *ngIf="clearing"></mat-progress-spinner>
+    <button mat-icon-button (click)="clear()" *ngIf="!clearing">
+      <mat-icon>delete_sweep</mat-icon>
+    </button>    
+    <mat-progress-spinner color="accent" mode="indeterminate" diameter=24 *ngIf="reloading"></mat-progress-spinner>
+    <button mat-icon-button (click)="reload()" *ngIf="!reloading">
+      <mat-icon>autorenew</mat-icon>
+    </button>
+    <button mat-icon-button (click)="addDownload()">
+      <mat-icon>add_to_queue</mat-icon>
+    </button>
+    <button mat-icon-button (click)="signOut()">
+      <mat-icon>lock</mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>

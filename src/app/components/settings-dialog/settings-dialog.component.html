@@ -1,0 +1,17 @@
+<div mat-dialog-content>
+  <div fxLayout="column">
+    <mat-form-field [floatLabel]="true">
+      <input matInput placeholder="Server" required name="server" [(ngModel)]="server">
+    </mat-form-field>
+    <mat-form-field [floatLabel]="true">
+      <input matInput placeholder="Port" type="number" required name="port" [(ngModel)]="port">
+    </mat-form-field>
+  </div>
+  <div *ngIf="error != ''" class="error">
+    {{error}}
+  </div>
+</div>
+<div mat-dialog-actions fxLayout="row" fxLayoutAlign="end end">
+  <button mat-flat-button (click)="cancel()">Cancel</button>
+  <button mat-raised-button color="primary" (click)="save()">Save</button>
+</div>

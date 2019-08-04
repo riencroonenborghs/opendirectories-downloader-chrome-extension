@@ -1,0 +1,40 @@
+<mat-expansion-panel class="download">
+  <mat-expansion-panel-header>
+    <mat-panel-title class="url">
+      <icon [icon]="'link'"></icon>
+      <span class="full-url">{{download.url}}</span>
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <div>
+    Added by {{download.user.email}}
+    <div *ngIf="download.status == 'started'">
+      Started on {{download.started_at | date:'medium'}}
+    </div>
+    <div *ngIf="download.status == 'finished' || download.status == 'error'">
+      Started on {{download.started_at | date:'medium'}}<br />
+      Finished on {{download.finished_at | date:'medium'}}
+    </div>
+    <div *ngIf="download.status == 'error'" class="error">
+      {{download.error}}
+    </div>
+  </div>
+  <mat-action-row>
+    <div *ngIf="download.status == 'queued'" class="buttons" fxLayout="row">
+      <button *ngIf="!cancelling" mat-button color="warn" (click)="cancel(download)">
+        <mat-icon>cancel</mat-icon>
+      </button>
+      <mat-progress-spinner mode="indeterminate" diameter=24 *ngIf="cancelling"></mat-progress-spinner>
+    </div>
+
+    <div *ngIf="download.status == 'finished' || download.status == 'error'  || download.status == 'cancelled'" class="buttons" fxLayout="row">
+      <button *ngIf="!removing" mat-button color="warn" (click)="remove(download)">
+        <mat-icon>delete</mat-icon>
+      </button>
+      <mat-progress-spinner mode="indeterminate" diameter=24 *ngIf="removing"></mat-progress-spinner>
+      <button *ngIf="!queueing" mat-button color="primary" (click)="queue(download)">
+        <mat-icon>add_to_queue</mat-icon>
+      </button>
+      <mat-progress-spinner mode="indeterminate" diameter=24 *ngIf="queueing"></mat-progress-spinner>
+    </div>
+  </mat-action-row>
+</mat-expansion-panel>

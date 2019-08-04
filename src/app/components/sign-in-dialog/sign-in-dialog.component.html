@@ -1,0 +1,16 @@
+<div mat-dialog-content>
+  <div fxLayout="column">
+    <mat-form-field [floatLabel]="true">
+      <input matInput placeholder="Email" required name="email" [(ngModel)]="email">
+    </mat-form-field>
+    <mat-form-field [floatLabel]="true">
+      <input matInput placeholder="Password" type="password" required name="password" [(ngModel)]="password">
+    </mat-form-field>
+  </div>
+  <div *ngIf="error != ''" class="error">
+    {{error}}
+  </div>
+</div>
+<div mat-dialog-actions fxLayout="row" fxLayoutAlign="end end">
+  <button mat-raised-button color="primary" (click)="logIn()">Sign in</button>
+</div>

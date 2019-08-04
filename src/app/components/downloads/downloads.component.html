@@ -1,0 +1,38 @@
+<mat-progress-bar mode="query" *ngIf="busy"></mat-progress-bar>
+<mat-tab-group>  
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon>list_alt</mat-icon>
+      <span matBadgeColor="accent" matBadge="{{queuedDownloads.length}}" matBadgeOverlap="false">Queued</span>
+    </ng-template>
+    <download-details *ngFor="let download of queuedDownloads" [download]="download"></download-details>      
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon>get_appw</mat-icon>
+      <span matBadgeColor="accent" matBadge="{{startedDownloads.length}}" matBadgeOverlap="false">Started</span>
+    </ng-template>
+    <download-details *ngFor="let download of startedDownloads" [download]="download"></download-details>      
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon>check</mat-icon>
+      <span matBadgeColor="accent" matBadge="{{finishedDownloads.length}}" matBadgeOverlap="false">Finished</span>
+    </ng-template>
+    <download-details *ngFor="let download of finishedDownloads" [download]="download"></download-details>      
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon>error_outline </mat-icon>
+      <span matBadgeColor="accent" matBadge="{{failedDownloads.length}}" matBadgeOverlap="false">Failed</span>
+    </ng-template>
+    <download-details *ngFor="let download of failedDownloads" [download]="download"></download-details>      
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon>cancel</mat-icon>
+      <span matBadgeColor="accent" matBadge="{{cancelledDownloads.length}}" matBadgeOverlap="false">Cancelled</span>
+    </ng-template>
+    <download-details *ngFor="let download of cancelledDownloads" [download]="download"></download-details>      
+  </mat-tab>
+</mat-tab-group>
