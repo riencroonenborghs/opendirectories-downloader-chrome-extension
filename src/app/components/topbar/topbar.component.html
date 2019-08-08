@@ -9,7 +9,7 @@
       <mat-icon>lock_open</mat-icon>
     </button>
   </mat-toolbar-row>
-
+  
   <mat-toolbar-row *ngIf="commService.signedIn">
     <button mat-icon-button (click)="settings()">
       <mat-icon>settings</mat-icon>
@@ -24,9 +24,9 @@
     <button mat-icon-button (click)="reload()" *ngIf="!reloading">
       <mat-icon>autorenew</mat-icon>
     </button>
-    <button mat-icon-button (click)="addDownload()">
+    <!-- <button mat-icon-button (click)="addDownload()">
       <mat-icon>add_to_queue</mat-icon>
-    </button>
+    </button> -->
     <button mat-icon-button (click)="signOut()">
       <mat-icon>lock</mat-icon>
     </button>

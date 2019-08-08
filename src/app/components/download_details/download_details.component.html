@@ -8,11 +8,11 @@
   <div>
     Added by {{download.user.email}}
     <div *ngIf="download.status == 'started'">
-      Started on {{download.started_at | date:'medium'}}
+      Started on {{download.started_at | date: 'medium'}}
     </div>
     <div *ngIf="download.status == 'finished' || download.status == 'error'">
-      Started on {{download.started_at | date:'medium'}}<br />
-      Finished on {{download.finished_at | date:'medium'}}
+      Started on {{download.started_at | date: 'medium'}}<br />
+      Finished on {{download.finished_at | date: 'medium'}}
     </div>
     <div *ngIf="download.status == 'error'" class="error">
       {{download.error}}

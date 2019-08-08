@@ -4,7 +4,7 @@ import { CommService } from "../../services/comm.service";
 import { AuthService } from "../../services/auth.service";
 import { DownloadsService } from "../../services/downloads.service";
 import { SettingsDialogComponent } from '../settings-dialog/settings-dialog.component';
-import { AddDownloadDialogComponent } from '../add-download-dialog/add-download-dialog.component';
+// import { AddDownloadDialogComponent } from '../add-download-dialog/add-download-dialog.component';
 
 @Component({
   selector: 'topbar',
@@ -44,9 +44,9 @@ export class TopbarComponent implements OnInit {
     this.clearing = false;
   }
 
-  addDownload() {
-    let dialogRef = this.dialog.open(AddDownloadDialogComponent);
-  }
+  // addDownload() {
+  //   let dialogRef = this.dialog.open(AddDownloadDialogComponent);
+  // }
 
   signOut() {
     this.authService.signOut().subscribe(

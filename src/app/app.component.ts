@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 
 import { MatDialog } from '@angular/material';
 import { SignInDialogComponent } from './components/sign-in-dialog/sign-in-dialog.component';
+import { AddDownloadDialogComponent } from './components/add-download-dialog/add-download-dialog.component';
 
 import { ChromeStorageService } from './services/chrome-storage.service';
 import { CommService } from './services/comm.service';
 // for the chrome background script
 import { DownloadsService } from './services/downloads.service';
-
 
 @Component({
   selector: 'app-root',
@@ -48,5 +48,9 @@ export class AppComponent {
 
   private showLogin() {
     this.dialog.open(SignInDialogComponent);    
+  }
+
+  addDownload() {
+    let dialogRef = this.dialog.open(AddDownloadDialogComponent);
   }
 }
