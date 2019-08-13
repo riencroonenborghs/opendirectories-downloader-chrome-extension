@@ -4,6 +4,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Download } from "../../models/download"
 import { DownloadsService } from "../../services/downloads.service";
 import { CommService } from "../../services/comm.service";
+import { ChromeStorageService } from "../../services/chrome-storage.service";
 
 @Component({
   selector: "downloads",
@@ -24,6 +25,7 @@ export class DownloadsComponent implements OnInit {
     private downloadsService: DownloadsService,
     public commService: CommService,
     private snackBar: MatSnackBar,
+    private chromeStorageService: ChromeStorageService
   ) {
     commService.reloadEvents$.subscribe((reload) => {
       this.getDownloads();
@@ -40,11 +42,24 @@ export class DownloadsComponent implements OnInit {
   getDownloads() {
     this.busy = true;
     this.resetDownloads();
-    this.downloadsService.get().subscribe((downloads: Download[]) => {
-      this.downloads = downloads;
-      this.filterAllDownloads();
-      this.busy = false;
-    });
+    this.downloadsService.get().subscribe(
+      (downloads: Download[]) => {
+        this.downloads = downloads;
+        this.filterAllDownloads();
+        this.busy = false;
+      },
+      error => {
+        if(error.status === 401) {
+          this.commService.signOut();
+          this.chromeStorageService.set(this.commService.serverSettings).then(
+            (res) => {
+              this.commService.signIn();
+            },
+            (error) => console.error(error)
+          );
+        }
+      }
+    );
   }
 
   private showMessage(message: string) {

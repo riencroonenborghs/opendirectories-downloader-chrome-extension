@@ -1,7 +1,7 @@
 <topbar></topbar>
 <downloads *ngIf="commService.signedIn"></downloads>
 
-<div class="add-download">
+<div *ngIf="commService.signedIn" class="add-download">
   <button mat-mini-fab (click)="addDownload()">
     <mat-icon>add_to_queue</mat-icon>
   </button>

@@ -41,4 +41,10 @@ export class SignInDialogComponent implements OnInit {
     );
   }
 
+  onEnter(event) {
+    if(event.keyCode == 13) {
+      this.logIn();
+    }
+  }
+
 }

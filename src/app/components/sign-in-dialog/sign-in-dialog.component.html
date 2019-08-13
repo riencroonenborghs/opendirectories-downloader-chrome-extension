@@ -1,10 +1,10 @@
 <div mat-dialog-content>
   <div fxLayout="column">
     <mat-form-field [floatLabel]="true">
-      <input matInput placeholder="Email" required name="email" [(ngModel)]="email">
+      <input matInput placeholder="Email" required name="email" [(ngModel)]="email" (keydown)="onEnter($event)">
     </mat-form-field>
     <mat-form-field [floatLabel]="true">
-      <input matInput placeholder="Password" type="password" required name="password" [(ngModel)]="password">
+      <input matInput placeholder="Password" type="password" required name="password" [(ngModel)]="password" (keydown)="onEnter($event)">
     </mat-form-field>
   </div>
   <div *ngIf="error != ''" class="error">
