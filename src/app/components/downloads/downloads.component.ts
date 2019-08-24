@@ -34,6 +34,10 @@ export class DownloadsComponent implements OnInit {
     commService.snackBarEvents$.subscribe((message) => {
       this.showMessage(message);
     });
+
+    commService.searchEvents$.subscribe((searchQuery) => {
+      this.filterAllDownloads();
+    });
   }
 
   ngOnInit() {    
@@ -83,6 +87,17 @@ export class DownloadsComponent implements OnInit {
     this.cancelledDownloads = this.filterDownloads("cancelled");
   }
   private filterDownloads(status: string) {
-    return this.downloads.filter((download, index, array) => { return download.status == status; }); 
+    return this.downloads.filter((download, index, array) => {
+      if(this.commService.searchQuery != null && this.commService.searchQuery != "") {
+        let re: RegExp = new RegExp(this.commService.searchQuery, "i");
+        console.log("--------------");
+        console.log(re);
+        console.log(download.url);
+        console.log(download.url.match(re));
+        return download.status == status && download.url.match(re) != null;
+      } else {
+        return download.status == status;
+      }
+    }); 
   }
 }

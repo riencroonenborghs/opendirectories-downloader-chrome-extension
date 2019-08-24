@@ -12,9 +12,8 @@ import { SettingsDialogComponent } from '../settings-dialog/settings-dialog.comp
   styleUrls: ['./topbar.component.sass']
 })
 export class TopbarComponent implements OnInit {
-  
-  clearing: boolean = false;
-  reloading: boolean = false;
+
+  search: boolean = false;
 
   constructor(
     public commService: CommService,
@@ -31,22 +30,31 @@ export class TopbarComponent implements OnInit {
   }
 
   reload() {
-    this.reloading = true;
     this.commService.reload();
-    this.reloading = false;
   }
 
   clear() {
-    this.clearing = true;
     this.downloadsService.clear().subscribe();
     this.commService.showMessage("Downloads cleared.");
     this.commService.reload();
-    this.clearing = false;
   }
 
-  // addDownload() {
-  //   let dialogRef = this.dialog.open(AddDownloadDialogComponent);
-  // }
+  showSearch() {
+    this.search = true;
+    this.commService.searchQuery = null;
+    this.commService.search();
+  }
+
+  hideSearch() {
+    this.search = false;
+    this.commService.searchQuery = null;
+    this.commService.search();
+  }
+  
+  clearSearch() {
+    this.commService.searchQuery = '';
+    this.commService.search();
+  }
 
   signOut() {
     this.authService.signOut().subscribe(

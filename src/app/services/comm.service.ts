@@ -8,14 +8,18 @@ export class CommService {
   public reloadEvents$: EventEmitter<boolean>;
   public signInEvents$: EventEmitter<boolean>;
   public snackBarEvents$: EventEmitter<string>;
+  public searchEvents$: EventEmitter<string>;
   
   public signedIn: boolean = false;
   public serverSettings: ServerSettings;
+
+  public searchQuery: string;
 
   constructor() {
     this.reloadEvents$ = new EventEmitter();
     this.signInEvents$ = new EventEmitter();
     this.snackBarEvents$ = new EventEmitter();
+    this.searchEvents$ = new EventEmitter();
   }
 
   reload(timeout: number = 500): void {
@@ -33,5 +37,9 @@ export class CommService {
 
   showMessage(message: string) {
     this.snackBarEvents$.emit(message);    
+  }
+
+  search() {
+    this.searchEvents$.emit(this.searchQuery);
   }
 }

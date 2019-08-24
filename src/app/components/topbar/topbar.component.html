@@ -16,17 +16,24 @@
     </button>
     <span>Downloader</span>
     <span class="spacer"></span>
-    <mat-progress-spinner color="accent" mode="indeterminate" diameter=24 *ngIf="clearing"></mat-progress-spinner>
-    <button mat-icon-button (click)="clear()" *ngIf="!clearing">
+    <mat-form-field *ngIf="search" id="search">
+      <input matInput name="searchQuery" [(ngModel)]="commService.searchQuery" (keyup)="commService.search()">
+      <button mat-button *ngIf="commService.searchQuery" matSuffix mat-icon-button (click)="clearSearch()">
+        <mat-icon>close</mat-icon>
+      </button>
+      <button mat-button matSuffix mat-icon-button (click)="hideSearch()">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-form-field>
+    <button mat-icon-button (click)="showSearch()" *ngIf="!search">
+      <mat-icon>search</mat-icon>
+    </button>
+    <button mat-icon-button (click)="clear()">
       <mat-icon>delete_sweep</mat-icon>
     </button>    
-    <mat-progress-spinner color="accent" mode="indeterminate" diameter=24 *ngIf="reloading"></mat-progress-spinner>
     <button mat-icon-button (click)="reload()" *ngIf="!reloading">
       <mat-icon>autorenew</mat-icon>
     </button>
-    <!-- <button mat-icon-button (click)="addDownload()">
-      <mat-icon>add_to_queue</mat-icon>
-    </button> -->
     <button mat-icon-button (click)="signOut()">
       <mat-icon>lock</mat-icon>
     </button>

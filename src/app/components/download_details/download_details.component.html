@@ -1,5 +1,5 @@
 <mat-expansion-panel class="download">
-  <mat-expansion-panel-header>
+  <mat-expansion-panel-header [ngClass]="{bigger: download.url.length > 180}">
     <mat-panel-title class="url">
       <icon [icon]="'link'"></icon>
       <span class="full-url">{{download.url}}</span>
