@@ -5,6 +5,7 @@ export class Download {
   weight:number;
   // basics
   url:string;
+  name:string;
   user: {id: 1, email: "rien@croonenborghs.net"}
   // status
   status:string;
@@ -43,6 +44,21 @@ export class Download {
     if(this.url.match(/\:\/\/released.tv\/files\/(.*)/) != null) {
       this.http_username = "released";
       this.http_password = "released";
+    }
+  }
+
+  parseUrlIntoName() {
+    if(this.url.match("magnet\:")) {
+      this.url.split("&").forEach((part) => {
+        let pair = part.split("=");
+        if(decodeURIComponent(pair[0]) == "dn") {
+          this.name = pair[1];
+        }
+      });
+    } else { 
+      this.name = this.url;
+      console.log(this.url);
+      console.log(this.name);
     }
   }
 }

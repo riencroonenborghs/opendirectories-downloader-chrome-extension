@@ -23,6 +23,8 @@ export class DownloadDetailsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    console.log(this.download);
+    this.download.parseUrlIntoName();
   }
 
   remove(download: Download) {
