@@ -1,32 +1,60 @@
 {
-  "name": "downloader",
-  "version": "4.8.0",
-  "description": "A downloader for opendirectories",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/riencroonenborghs/opendirectories-downloader-chrome-extension.git"
+  "name": "od-manager",
+  "version": "6.0.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service build --mode development --watch",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
   },
-  "keywords": ["chrome", "extension", "opendirectories", "Chrome extension"],
-  "readmeFilename": "README.md",
-  "author": "Rien Croonenborghs",
-  "homepage": "https://github.com/riencroonenborghs/bbc-iplayer-downloader-chrome-extension",
-  "license": "MIT",
   "dependencies": {
-    "angular": "1.7.2",
-    "angular-cookie": "4.1.0",
-    "angular-animate": "1.7.2",
-    "angular-aria": "1.7.2",
-    "angular-material": "1.1.9",
-    "angular-material-icons": "0.7.1",
-    "angular-sortable-view": "0.0.17",
-    "ng-token-auth": "0.0.30",
-    "jquery": "3.3.1",
-    "moment": "2.22.2"
+    "core-js": "^3.6.5",
+    "dayjs": "^1.8.32",
+    "vue": "^2.6.11",
+    "vue-flex": "^2.1.2",
+    "vue-localstorage": "^0.6.2",
+    "vue-material": "^1.0.0-beta-14",
+    "vue-resource": "^1.5.1",
+    "vue-router": "^3.2.0",
+    "vuex": "^3.4.0"
   },
   "devDependencies": {
-    "gulp":  "3.9.1",
-    "gulp-coffee": "3.0.2",
-    "gulp-util": "3.0.8",
-    "del": "3.0.0"    
-  }
+    "@vue/cli-plugin-babel": "~4.4.0",
+    "@vue/cli-plugin-eslint": "~4.4.0",
+    "@vue/cli-plugin-router": "~4.4.0",
+    "@vue/cli-plugin-vuex": "~4.4.0",
+    "@vue/cli-service": "~4.4.0",
+    "@vue/eslint-config-standard": "^5.1.2",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.2",
+    "vue-cli-plugin-browser-extension": "~0.25.1",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true,
+      "webextensions": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "@vue/standard"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
 }
